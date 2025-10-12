@@ -32,13 +32,13 @@
                         "additionalProperties": false
                     }
                 },
-                "Category": {
+                "category": {
                     "$ref": "#/definitions/Cat"
                 },
-                "BoxArt": {
+                "boxArt": {
                     "type": "string"
                 },
-                "category": {
+                "genres": {
                     "type": "object",
                     "properties": {
                         "size": {
@@ -83,11 +83,12 @@
                 }
             },
             "required": [
+                "$schema",
                 "title",
                 "team",
-                "Category",
-                "BoxArt",
                 "category",
+                "boxArt",
+                "genres",
                 "date",
                 "description",
                 "stores",
