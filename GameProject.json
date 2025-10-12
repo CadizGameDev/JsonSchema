@@ -1,0 +1,104 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$ref": "#/definitions/ProjectData",
+    "title": "Game Project",
+    "definitions": {
+        "ProjectData": {
+            "type": "object",
+            "properties": {
+                "title": {
+                    "type": "string"
+                },
+                "team": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "url"
+                        ],
+                        "additionalProperties": false
+                    }
+                },
+                "Category": {
+                    "$ref": "#/definitions/Cat"
+                },
+                "BoxArt": {
+                    "type": "string"
+                },
+                "category": {
+                    "type": "object",
+                    "properties": {
+                        "size": {
+                            "type": "number"
+                        }
+                    },
+                    "required": [
+                        "size"
+                    ],
+                    "additionalProperties": false
+                },
+                "date": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "stores": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "url"
+                        ],
+                        "additionalProperties": false
+                    }
+                },
+                "screenshots": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": [
+                "title",
+                "team",
+                "Category",
+                "BoxArt",
+                "category",
+                "date",
+                "description",
+                "stores",
+                "screenshots"
+            ],
+            "additionalProperties": false
+        },
+        "Cat": {
+            "type": "number",
+            "enum": [
+                0,
+                1,
+                2,
+                3
+            ]
+        }
+    }
+}
