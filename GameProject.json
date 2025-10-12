@@ -6,6 +6,10 @@
         "ProjectData": {
             "type": "object",
             "properties": {
+                "$schema": {
+                    "type": "string",
+                    "description": "The schema to verify this document against."
+                },
                 "title": {
                     "type": "string"
                 },
