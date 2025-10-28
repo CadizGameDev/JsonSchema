@@ -37,6 +37,25 @@
                         "additionalProperties": false
                     }
                 },
+                "publishers": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "url"
+                        ],
+                        "additionalProperties": false
+                    }
+                },
                 "inDevelopment": {
                     "type": "boolean"
                 },
@@ -80,7 +99,7 @@
                         "properties": {
                             "name": {
                                 "type": "string",
-                                "description": "recommeded `steam` and `itchio`"
+                                "description": "recommeded `steam`, `itchio` and `playstore`"
                             },
                             "url": {
                                 "type": "string"
@@ -105,6 +124,7 @@
                 "id",
                 "title",
                 "team",
+                "publishers",
                 "inDevelopment",
                 "category",
                 "boxArt",
