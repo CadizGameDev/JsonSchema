@@ -60,6 +60,7 @@
                     "type": "boolean"
                 },
                 "category": {
+                    "description": "0 = Commercial, 1 = GameJam, 2 = Otros y 3 es reservado",
                     "$ref": "#/definitions/Cat"
                 },
                 "boxArt": {
@@ -139,6 +140,7 @@
         },
         "Cat": {
             "type": "number",
+            "description": "0 = Commercial, 1 = GameJam, 2 = Otros y 3 es reservado",
             "enum": [
                 0,
                 1,
