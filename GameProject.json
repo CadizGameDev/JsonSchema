@@ -10,6 +10,11 @@
                     "type": "string",
                     "description": "The schema to verify this document against."
                 },
+                "id": {
+                    "type": "string",
+                    "description": "Unique Id for relative storage or changes",
+                    "maxLength": 6
+                },
                 "title": {
                     "type": "string"
                 },
@@ -32,11 +37,15 @@
                         "additionalProperties": false
                     }
                 },
+                "inDevelopment": {
+                    "type": "boolean"
+                },
                 "category": {
                     "$ref": "#/definitions/Cat"
                 },
                 "boxArt": {
-                    "type": "string"
+                    "type": "string",
+                    "description": "use a external url or relative to data/media/$id"
                 },
                 "genres": {
                     "type": "object",
@@ -50,7 +59,15 @@
                     ],
                     "additionalProperties": false
                 },
+                "ytvideoid": {
+                    "type": "string",
+                    "description": "Just the youtube video id, Not the url"
+                },
                 "date": {
+                    "type": "string",
+                    "description": "Format YYYY/MM/DD"
+                },
+                "shortDescription": {
                     "type": "string"
                 },
                 "description": {
@@ -62,7 +79,8 @@
                         "type": "object",
                         "properties": {
                             "name": {
-                                "type": "string"
+                                "type": "string",
+                                "description": "recommeded `steam` and `itchio`"
                             },
                             "url": {
                                 "type": "string"
@@ -84,12 +102,15 @@
             },
             "required": [
                 "$schema",
+                "id",
                 "title",
                 "team",
+                "inDevelopment",
                 "category",
                 "boxArt",
                 "genres",
                 "date",
+                "shortDescription",
                 "description",
                 "stores",
                 "screenshots"
